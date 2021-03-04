@@ -1,0 +1,79 @@
+{"funcs" : [
+            [
+			 " eval(",
+             " assert(",
+             " system(",
+             " exec(",
+             " shell_exec(",
+             " passthru(",
+             " escapeshellcmd(",
+             " pcntl_exec("
+            ],
+            [
+             "require($",
+             "require_once($",
+             "include($",
+             "include_once($"
+            ],
+            [
+             "parse_str(",
+             "ob_start(",
+             " usort(",
+             " uasort(",
+             "foreach($_POST",
+             "foreach($_GET",
+             "foreach($_REQUEST",
+             "foreach($_COOKIE"
+            ],
+            [
+             " file_put_contents(",
+             "file_get_contents($",
+             "unlink($",
+             "copy($",
+             "rmdirs($"
+            ],
+            [
+             "fopen($",
+             "fwrite(",
+             "fgets($",
+             "fread($"
+            ],
+            [
+             "$_SERVER['HTTP_X_FORWARDED_FOR']",
+             "$_SERVER['HTTP_REFERER']"
+            ],
+            [
+             " create_function("
+            ],
+            [
+             " array_map(",
+             " array_filter("
+            ],
+            [
+             "extract("
+            ],
+            [
+             "unserialize("
+            ],
+            [
+             " simplexml_load_string("
+            ],
+            [
+             "`$"
+            ]
+        ],
+"descriptions":[
+    "命令执行函数中存在变量，可能存在任意命令执行漏洞",
+    "文件包含函数中存在变量,可能存在文件包含漏洞",
+    "函数中存在变量,可能存在变量覆盖漏洞",
+    "文件操作函数中存在变量，可能存在任意文件读取/删除/修改/写入等漏洞",
+    "读取文件函数中存在变量，可能存在任意文件读取漏洞",
+    "获取IP地址方式可伪造，HTTP_REFERER可伪造，常见引发SQL注入等漏洞",
+    "创建匿名函数，可能存在代码注入漏洞",
+    "参数包含变量，变量可控可能会导致代码执行漏洞",
+    "函数中存在变量，可能存在变量覆盖漏洞",
+    "序列化函数，可能存在反序列化漏洞",
+    "可能存在信息泄露漏洞，读取任意文件",
+    "``反引号中包含变量，变量可控会导致命令执行漏洞"
+]
+}

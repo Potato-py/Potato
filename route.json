@@ -1,0 +1,85 @@
+{
+	"routeMenu" :[
+		"1. 使用帮助",
+		"2. cms指纹扫描",
+		"3. 资产检索(3.1普通版[默认] 3.2vip版)",
+		"4. 端口服务扫描",
+		"5. 路径爆破",
+		"6. 社工字典生成",
+		"7. 弱密码爆破",
+		"8. 漏洞扫描",
+		"9. sql注入(9.1sqlmap[默认] 9.2脚本)",
+		"10.msfconsole",
+		"11.代码审计",
+		"12.日志审计",
+		"13.hash校验",
+		"14.arp攻击",
+		"15.dos攻击"],
+	"routeData":[
+		{
+			"id":["2"],
+			"describe":"cms指纹扫描",
+			"cmd":"cd ./infoSearch&&python ./cmsRecognition.py"
+		},{
+			"id":["3","3.1"],
+			"describe":"资产检索普通版",
+			"cmd":"cd ./infoSearch&&python ./fofaExcle.py"
+		},{
+			"id":["3.2"],
+			"describe":"资产检索vip版",
+			"cmd":"cd ./infoSearch&&python ./fofaVip.py"
+		},{
+			"id":["4"],
+			"describe":"端口服务扫描",
+			"cmd":"cd ./nmap&&python ./nmapScanAll.py"
+		},{
+			"id":["5"],
+			"describe":"路径爆破",
+			"cmd":"cd ./dirScan&&python ./dirScan.py"
+		},{
+			"id":["6"],
+			"describe":"社工字典生成",
+			"cmd":"cd ./dict&&python ./dict.py"
+		},{
+			"id":["7"],
+			"describe":"弱密码爆破",
+			"cmd":"cd ./passwdCheck&&python ./passwdCheck.py"
+		},{
+			"id":["8"],
+			"describe":"漏洞扫描",
+			"cmd":"cd ./exp&&python ./expInit.py"
+		},{
+			"id":["9","9.1"],
+			"describe":"sql注入sqlmap版",
+			"cmd":"cd /d D:/Python/sqlmap&&python ./sqlmap.py"
+		},{
+			"id":["9.2"],
+			"describe":"sql注入脚本版",
+			"cmd":"cd ./infoSearch&&python ./"
+		},{
+			"id":["10"],
+			"describe":"msfconsole",
+			"cmd":"msfconsole"
+		},{
+			"id":["11"],
+			"describe":"代码审计",
+			"cmd":"cd ./infoSearch&&python ./codeAudit.py"
+		},{
+			"id":["12"],
+			"describe":"日志审计",
+			"cmd":"cd ./infoSearch&&python ./logminer.py"
+		},{
+			"id":["13"],
+			"describe":"hash校验",
+			"cmd":"cd ./integrityCheck&&python ./integrityCheck.py"
+		},{
+			"id":["14"],
+			"describe":"arp攻击",
+			"cmd":"cd ./arp&&python ./arpATK.py"
+		},{
+			"id":["15"],
+			"describe":"dos攻击",
+			"cmd":"cd ./dos&&python ./dosATK.py"
+		}
+	]
+}
