@@ -3,7 +3,17 @@
 
 import requests
 import zlib
-import json
+import json,sys
+
+sys.path.append('..')
+from common.font import *
+from common.pubOptimization import *
+#防止高频调用导致堵塞，可对某些字段进行存储
+Processing=str(Processing())
+Information=str(Information())
+Detected=str(Detected())
+Result=str(Result())
+Error=str(Error())
 
 def whatweb(url):
     response = requests.get(url,verify=False)
@@ -21,12 +31,12 @@ if __name__ == '__main__':
     print('')
     isUrl=1
     while isUrl:
-        inputData=input('请输入你要识别的网站：		（请填写完整网址，如：http://www.baidu.com）\n\n')
+        inputData=input('请输入你要识别的网站：		（请填写完整网址，如：http://www.baidu.com）\n\n'+Input())
         if not inputData:
             print(Error+'网站不可为空！\n')
         else:
             isUrl=0
     request = whatweb(inputData)
     print('')
-    print(u"识别结果")
-    print(request.json())
+    print(Information+"识别结果：")
+    print(Result+str(request.json()))

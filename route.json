@@ -14,7 +14,8 @@
 		"12.日志审计",
 		"13.hash校验",
 		"14.arp攻击",
-		"15.dos攻击"],
+		"15.dos攻击",
+		"16.个人信息查询"],
 	"routeData":[
 		{
 			"id":["2"],
@@ -80,6 +81,10 @@
 			"id":["15"],
 			"describe":"dos攻击",
 			"cmd":"cd ./dos&&python ./dosATK.py"
+		},{
+			"id":["16"],
+			"describe":"个人信息查询",
+			"cmd":"cd ./infoSearch&&python ./peopleFind.py"
 		}
 	]
 }

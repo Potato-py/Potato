@@ -46,7 +46,8 @@ def Quit_2(signum, frame):	#模式2
 def main():
     signal.signal(signal.SIGINT, Quit_1)#主动终止ctrl+c
     signal.signal(signal.SIGTERM, Quit_1)#被迫中止
-    startChose=1
+    startChose=1#开始选择
+    noOption=1#无选择菜单选项
     while startChose:
         param=''
         logo_2()
@@ -65,6 +66,12 @@ def main():
                 os.system("cls")
                 print ("\n"+Processing+"-------------------%s模块加载中---------------------\n"%menuData["describe"])
                 os.system(menuData["cmd"]+param)
+                noOption=0
+                break
+            else:
+                noOption=1
+        if noOption and action!='1':
+            os.system(action)
 try:
     main()
 except Exception as error:
