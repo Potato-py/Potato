@@ -138,11 +138,13 @@ if mateName:
 print('')
 print(Information+'----------------------------------------------------------------- \n\n')
 isOther=1
+idIndex=0
 while isOther:
     any=input(bold('是否还有其他可能含有的字符?  请输入Y/N \n\n')+Input())
     print('')
     if any=='y' or any=='yes' or any=='Y' or any=='YES' or any=='Yes':
-        other=input(bold(str(i+12)+'、请输入其他可能含有的字符：\n\n')+Input())
+        other=input(bold(str(idIndex+12)+'、请输入其他可能含有的字符：\n\n')+Input())
+        idIndex=idIndex+1
         if other:
             words.append(other)
         print('')

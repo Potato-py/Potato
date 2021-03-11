@@ -44,7 +44,7 @@ if __name__ == '__main__':
         file=open(dirPath)
     except:
         print(Information+'输入字典有误，将使用默认字典')
-        file=open(r'.\dir.txt')
+        file=open(r'.\dir.txt',encoding='utf-8')
     for url in file.readlines():
         dir.append(url.rstrip('\n'))
     print(Processing+'正在进行目录爆破……')

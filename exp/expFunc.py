@@ -28,8 +28,8 @@ def HttpGet(urlPoc,headers):
         requests.packages.urllib3.disable_warnings()#解决InsecureRequestWarning警告
         headersDict=headDict(headers)
         response=requests.get(urlPoc,headers=headersDict,timeout=10,verify=False)
-        return [response.content.decode('utf-8'),str(response.headers)]
-    except:
+        return [response.content.decode('gbk'),str(response.headers)]
+    except Exception as e:
         print(Error+'{} 请求超时'.format(urlPoc))
         return ['','']
 def HttpPost(urlPoc,data,headers):
@@ -37,7 +37,7 @@ def HttpPost(urlPoc,data,headers):
         requests.packages.urllib3.disable_warnings()#解决InsecureRequestWarning警告
         headersDict=headDict(headers)
         response=requests.post(urlPoc,data=data,headers=headersDict,timeout=10,verify=False)
-        return [response.content.decode('utf-8'),str(response.headers)]
+        return [response.content.decode('gbk'),str(response.headers)]
     except:
         print(Error+'{} 请求超时'.format(urlPoc))
         return ['','']

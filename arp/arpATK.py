@@ -102,6 +102,7 @@ if __name__ == "__main__":
     isIp_1=1
     isIp_2=1
     ip_1=''
+    p = re.compile('^((25[0-5]|2[0-4]\d|[01]?\d\d?)\.){3}(25[0-5]|2[0-4]\d|[01]?\d\d?)$')
     broadcast=input('\n'+bold('是否广播arpATK：		（ Y/N	【默认N】）\n\n')+Input())
     if broadcast.lower()!='y':
         while isIp_1:
